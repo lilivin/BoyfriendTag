@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="welcomeSection">
+        <h1>BoooyFriend TAAAAG!</h1>
+        <h1>Przedstaw się</h1>
+        <form>
+            <label for="female">Jak ma Pani na imię?</label>
+            <input id="female" type="text" required="required">
+            <label for="male">Jak ma Pan na imię?</label>
+            <input id="male" type="text">
+            <label for="howGames">Do ilu punktów gracie?</label>
+            <input id="howGames" type="number">
+        </form>
+        <button type="submit" id="submitNames">Start</button>
+    </section>
+
+    <section id="questionSection" style="display: none;">
+        <div class="points">
+            <h2 id="femalePointsContainer"></h2>
+            <h2 id="malePointsContainer"></h2>
+        </div>
+        <div id="questionMain">Pytanie do Ciebie mordeczko jest właśnie takie</div>
+        <button id="startAnswer">Odpowiadamy</button>
+    </section>
+
+    <section id="femaleAnswerSection" style="display: none;">
+        <h1 id="answerFemaleName"></h1>
+        <div id="questionFemale">
+            Pytanie dla tej pięknej Pani po drugiej stronie.
+        </div>
+        <form>
+            <label for="aboutYou">O Tobie</label>
+            <input type="text" id="aboutYouFemale">
+            <label for="aboutPartner">O Partnerze</label>
+            <input type="text" id="aboutPartnerFemale">
+        </form>
+        <button id="femaleAnswer">Odpowiedz</button>
+    </section>
+
+    <section id="maleAnswerSection" style="display: none;">
+        <h1 id="answerMaleName"></h1>
+        <div id="questionMale">
+            Pytanie dla tego pięknego Pana po drugiej stronie.
+        </div>
+        <form>
+            <label for="aboutYou">O Tobie</label>
+            <input type="text" id="aboutYouMale">
+            <label for="aboutPartner">O Partnerce</label>
+            <input type="text" id="aboutPartnerMale">
+        </form>
+        <button id="maleAnswer">Odpowiedz</button>
+    </section>
+
+    <section id="checkAnswerSection" style="display: none;">
+        <h2>I jak Wam poszło? </h2>
+        <div id="questionEnd"></div>
+        <div>
+            <h2 id="checkAnswerSectionFemaleName"></h2>
+            <div>
+                <div>
+                    <h4>O Sobie</h4>
+                    <p id="aboutYouFemaleShow"></p>
+                </div>
+                <div>
+                    <h4>O Partnerze</h4>
+                    <p id="aboutPartnerFemaleShow"></p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h2 id="checkAnswerSectionMaleName"></h2>
+            <div>
+                <div>
+                    <h4>O Sobie</h4>
+                    <p id="aboutYouMaleShow"></p>
+                </div>
+                <div>
+                    <h4>O Partnerce</h4>
+                    <p id="aboutPartnerMaleShow"></p>
+                </div>
+            </div>
+        </div>
+
+        <button id="femaleCorrectBtn"></button>
+        <button id="bothCorrectBtn"></button>
+        <button id="maleCorrectBtn"></button>      
+    </section>
+
+    <section id="finalSection" style="display: none;">
+        <h1>Wygrywa Karol</h1>
+        <button>Powrót do menu!</button>
+    </section>
+</body>
+<script src="array.js"></script>
+<script src="game.js"></script>
+</html>
