@@ -48,21 +48,21 @@ function askQuestion() {
             checkAnswerSection.style.display = 'none';
             questionSection.style.display = 'block';
 
-            document.getElementById('femalePointsContainer').innerHTML = `${femaleName}: ${femalePoints} punktów`;
-            document.getElementById('malePointsContainer').innerHTML = `${maleName}: ${malePoints} punktów`;
+            document.getElementById('femalePointsContainer').innerHTML = `<b>${femaleName}:</b> ${femalePoints} punktów`;
+            document.getElementById('malePointsContainer').innerHTML = `<b>${maleName}:</b> ${malePoints} punktów`;
         }
 }
 
 submitNamesBtn.addEventListener('click', askQuestion)
 
 startAnswerBtn.addEventListener('click', function() {
-    document.getElementById('answerFemaleName').innerHTML = `Odpowiada ${femaleName}`;
+    document.getElementById('answerFemaleName').innerHTML = `Odpowiada <b>${femaleName}</b>`;
     questionSection.style.display = 'none';
     femaleAnswerSection.style.display = 'block';
 })
 
 femaleAnswerBtn.addEventListener('click', function() {
-    document.getElementById('answerMaleName').innerHTML = `Odpowiada ${maleName}`;
+    document.getElementById('answerMaleName').innerHTML = `Odpowiada <b>${maleName}</b>`;
     aboutYouFemale = document.getElementById('aboutYouFemale').value;
     aboutPartnerFemale = document.getElementById('aboutPartnerFemale').value;
     
@@ -81,9 +81,9 @@ maleAnswerBtn.addEventListener('click', function() {
     if(aboutYouMale == '' || aboutPartnerMale == '') {
         alert('Wpisz Odpowiedzi!')
     } else {
-    maleCorrectBtn.innerHTML = `${maleName} dobrze`;
-    bothCorrectBtn.innerHTML = `Oboje dobrze`;
-    femaleCorrectBtn.innerHTML = `${femaleName} dobrze`;
+    maleCorrectBtn.innerHTML = `${maleName}`;
+    bothCorrectBtn.innerHTML = `Oboje`;
+    femaleCorrectBtn.innerHTML = `${femaleName}`;
 
     maleAnswerSection.style.display = 'none';
     checkAnswerSection.style.display = 'block';
