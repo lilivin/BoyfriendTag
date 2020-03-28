@@ -22,20 +22,40 @@ let howGames = 0;
 let aboutYouFemale = '';
 let aboutPartnerFemale = '';
 
+let radioFemaleValue = '';
+let radioMaleValue = '';
+
 let aboutYouMale = '';
 let aboutPartnerMale = '';
 
 let femalePoints = 0;
 let malePoints = 0;
 
+let questionNumber = null;
+let questionType = '';
+let question = '';
+
+function lotto() {
+    questionNumber = Math.floor(Math.random() * myArray.length);
+    question = myArray[questionNumber].name;
+    questionType = myArray[questionNumber].type;
+}
+
 function askQuestion() {
-    let questionNumber = Math.floor(Math.random() * myArray.length);
-    let question = myArray[questionNumber].name;
-    document.getElementById('questionMain').innerHTML = `${question}`;
-            document.getElementById('questionFemale').innerHTML = `${question}`;
-            document.getElementById('questionMale').innerHTML = `${question}`;
-            document.getElementById('questionEnd').innerHTML = `${question}`;
-            myArray.splice(questionNumber, 1);
+        lotto();
+        document.getElementById('questionMain').innerHTML = `${question}`;
+        document.getElementById('questionFemale').innerHTML = `${question}`;
+        document.getElementById('questionMale').innerHTML = `${question}`;
+        document.getElementById('questionEnd').innerHTML = `${question}`;
+        myArray.splice(questionNumber, 1);
+
+        if (questionType == "radio") {
+            document.getElementById('femaleFormRadioForm').style.display = "block";
+            document.getElementById('maleFormRadioForm').style.display = "block";
+        } else {
+            document.getElementById('femaleFormWrite').style.display = "block";
+            document.getElementById('maleFormWrite').style.display = "block";
+        }
 
         femaleName = document.getElementById('female').value;
         maleName = document.getElementById('male').value;
@@ -57,45 +77,96 @@ submitNamesBtn.addEventListener('click', askQuestion)
 
 startAnswerBtn.addEventListener('click', function() {
     document.getElementById('answerFemaleName').innerHTML = `Odpowiada <b>${femaleName}</b>`;
+    document.getElementById('maleRadioFormMale').innerHTML = `${maleName}`;
+    document.getElementById('femaleRadioFormMale').innerHTML = `${femaleName}`;
+    document.getElementById('femaleRadioFormFemale').innerHTML = `${femaleName}`;
+    document.getElementById('maleRadioFormFemale').innerHTML = `${maleName}`;
     questionSection.style.display = 'none';
     femaleAnswerSection.style.display = 'block';
 })
 
 femaleAnswerBtn.addEventListener('click', function() {
     document.getElementById('answerMaleName').innerHTML = `Odpowiada <b>${maleName}</b>`;
-    aboutYouFemale = document.getElementById('aboutYouFemale').value;
-    aboutPartnerFemale = document.getElementById('aboutPartnerFemale').value;
-    
-    if(aboutYouFemale == '' || aboutPartnerFemale == '') {
-        alert('Wpisz odpowiedzi!')
+
+    if (questionType == "radio") {
+        radioFemaleValue = document.querySelector('input[name="femaleFormRadio"]:checked').value;
+        if (radioFemaleValue == '') {
+            alert("Zaznacz jedną z opcji!")
+        } else {
+            femaleAnswerSection.style.display = 'none';
+            maleAnswerSection.style.display = 'block';
+        }
     } else {
-        femaleAnswerSection.style.display = 'none';
-        maleAnswerSection.style.display = 'block';
+        aboutYouFemale = document.getElementById('aboutYouFemale').value;
+        aboutPartnerFemale = document.getElementById('aboutPartnerFemale').value;
+        if(aboutYouFemale == '' || aboutPartnerFemale == '') {
+            alert('Wpisz odpowiedź!')
+        } else {
+            femaleAnswerSection.style.display = 'none';
+            maleAnswerSection.style.display = 'block';
+        }
     }
+    
+
+    
 })
 
-maleAnswerBtn.addEventListener('click', function() {
-    aboutYouMale = document.getElementById('aboutYouMale').value;
-    aboutPartnerMale = document.getElementById('aboutPartnerMale').value;
+function checkWhoWin() {
+    document.getElementById('checkAnswerSectionFemaleName').innerHTML = `${femaleName}`;
+    document.getElementById('checkAnswerSectionMaleName').innerHTML = `${maleName}`;
 
-    if(aboutYouMale == '' || aboutPartnerMale == '') {
-        alert('Wpisz Odpowiedzi!')
-    } else {
     maleCorrectBtn.innerHTML = `${maleName}`;
     bothCorrectBtn.innerHTML = `Oboje`;
     femaleCorrectBtn.innerHTML = `${femaleName}`;
 
+    if (questionType == "radio") {
+        radioMaleValue = document.querySelector('input[name="maleFormRadio"]:checked').value;
+        if (radioMaleValue == '') {
+            alert('Zaznacz jedną z opcji!')
+        } else {
+            document.getElementById('checkAnswerFemaleWrite').style.display = "none";
+            document.getElementById('checkAnswerMaleWrite').style.display = "none";
+            document.getElementById('checkAnswerMaleRadio').style.display = "block";
+            document.getElementById('checkAnswerFemaleRadio').style.display = "block";
+            if (radioMaleValue == "male") {
+                document.getElementById('checkAnswerMaleRadio').innerHTML = maleName;
+            } else {
+                document.getElementById('checkAnswerMaleRadio').innerHTML = femaleName;
+            }
+
+            if (radioFemaleValue == "male") {
+                document.getElementById('checkAnswerFemaleRadio').innerHTML = maleName;
+            } else {
+                document.getElementById('checkAnswerFemaleRadio').innerHTML = femaleName;
+            }
+
+            document.querySelector('input[name="maleFormRadio"]:checked').checked = false;
+            document.querySelector('input[name="femaleFormRadio"]:checked').checked = false;
+        }
+    } else {
+        aboutYouMale = document.getElementById('aboutYouMale').value;
+        aboutPartnerMale = document.getElementById('aboutPartnerMale').value;
+        if (aboutYouMale == '' || aboutPartnerMale == '') {
+            alert('Wpisz odpowiedź!')
+        } else {
+            document.getElementById('checkAnswerFemaleWrite').style.display = "flex";
+        document.getElementById('checkAnswerMaleWrite').style.display = "flex";
+        document.getElementById('checkAnswerMaleRadio').style.display = "none";
+        document.getElementById('checkAnswerFemaleRadio').style.display = "none";
+
+        document.getElementById('aboutYouFemaleShow').innerHTML = `${aboutYouFemale}`;
+        document.getElementById('aboutPartnerFemaleShow').innerHTML = `${aboutPartnerFemale}`;
+        document.getElementById('aboutYouMaleShow').innerHTML = `${aboutYouMale}`;
+        document.getElementById('aboutPartnerMaleShow').innerHTML = `${aboutPartnerMale}`;
+        }
+    }
+
     maleAnswerSection.style.display = 'none';
     checkAnswerSection.style.display = 'block';
 
-    document.getElementById('checkAnswerSectionFemaleName').innerHTML = `${femaleName}`;
-    document.getElementById('checkAnswerSectionMaleName').innerHTML = `${maleName}`;
-    document.getElementById('aboutYouFemaleShow').innerHTML = `${aboutYouFemale}`;
-    document.getElementById('aboutPartnerFemaleShow').innerHTML = `${aboutPartnerFemale}`;
-    document.getElementById('aboutYouMaleShow').innerHTML = `${aboutYouMale}`;
-    document.getElementById('aboutPartnerMaleShow').innerHTML = `${aboutPartnerMale}`;
-    }
-})
+}
+
+maleAnswerBtn.addEventListener('click', checkWhoWin)
 
 maleCorrectBtn.addEventListener('click', function() {
     malePoints += 1;
@@ -107,6 +178,7 @@ maleCorrectBtn.addEventListener('click', function() {
     } else {
         askQuestion();
     }
+    
 })
 
 bothCorrectBtn.addEventListener('click', function() {
@@ -119,6 +191,7 @@ bothCorrectBtn.addEventListener('click', function() {
     } else {
         askQuestion();
     }
+    
 })
 
 femaleCorrectBtn.addEventListener('click', function() {
@@ -130,6 +203,7 @@ femaleCorrectBtn.addEventListener('click', function() {
     } else {
         askQuestion();
     }
+    
 })
 
 
@@ -138,5 +212,15 @@ function refreshInputs() {
     document.getElementById('aboutPartnerFemale').value = '';
     document.getElementById('aboutYouMale').value = '';
     document.getElementById('aboutPartnerMale').value = '';
+
+    document.getElementById('femaleFormRadioForm').style.display = "none";
+    document.getElementById('maleFormRadioForm').style.display = "none";
+    document.getElementById('femaleFormWrite').style.display = "none";
+    document.getElementById('maleFormWrite').style.display = "none";
+
+    questionType = '';
+
+    radioMaleValue = '';
+    radioFemaleValue = '';
 }
     
