@@ -142,6 +142,9 @@ function checkWhoWin() {
 
             document.querySelector('input[name="maleFormRadio"]:checked').checked = false;
             document.querySelector('input[name="femaleFormRadio"]:checked').checked = false;
+
+            maleAnswerSection.style.display = 'none';
+            checkAnswerSection.style.display = 'block';
         }
     } else {
         aboutYouMale = document.getElementById('aboutYouMale').value;
@@ -150,20 +153,19 @@ function checkWhoWin() {
             alert('Wpisz odpowiedź!')
         } else {
             document.getElementById('checkAnswerFemaleWrite').style.display = "flex";
-        document.getElementById('checkAnswerMaleWrite').style.display = "flex";
-        document.getElementById('checkAnswerMaleRadio').style.display = "none";
-        document.getElementById('checkAnswerFemaleRadio').style.display = "none";
+            document.getElementById('checkAnswerMaleWrite').style.display = "flex";
+            document.getElementById('checkAnswerMaleRadio').style.display = "none";
+            document.getElementById('checkAnswerFemaleRadio').style.display = "none";
 
-        document.getElementById('aboutYouFemaleShow').innerHTML = `${aboutYouFemale}`;
-        document.getElementById('aboutPartnerFemaleShow').innerHTML = `${aboutPartnerFemale}`;
-        document.getElementById('aboutYouMaleShow').innerHTML = `${aboutYouMale}`;
-        document.getElementById('aboutPartnerMaleShow').innerHTML = `${aboutPartnerMale}`;
+            document.getElementById('aboutYouFemaleShow').innerHTML = `${aboutYouFemale}`;
+            document.getElementById('aboutPartnerFemaleShow').innerHTML = `${aboutPartnerFemale}`;
+            document.getElementById('aboutYouMaleShow').innerHTML = `${aboutYouMale}`;
+            document.getElementById('aboutPartnerMaleShow').innerHTML = `${aboutPartnerMale}`;
+            
+            maleAnswerSection.style.display = 'none';
+            checkAnswerSection.style.display = 'block';
         }
     }
-
-    maleAnswerSection.style.display = 'none';
-    checkAnswerSection.style.display = 'block';
-
 }
 
 maleAnswerBtn.addEventListener('click', checkWhoWin)
