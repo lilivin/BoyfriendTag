@@ -1,0 +1,341 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.welcomeSection {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background-size: cover;
+  background-image: url(./Grafiki/tło.jpg);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 150px 100px auto 100px;
+      grid-template-rows: 150px 100px auto 100px;
+  text-align: center;
+  color: white;
+}
+
+.welcomeSection__header {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 62px;
+  text-shadow: -8px 0 black, 0 8px black, 8px 0 black, 0 -8px black;
+}
+
+.welcomeSection__description {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 42px;
+  text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;
+}
+
+.welcomeSection__image--boy {
+  position: absolute;
+  width: 400px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
+  left: 10%;
+}
+
+.welcomeSection__image--girl {
+  position: absolute;
+  width: 400px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
+  right: 10%;
+}
+
+.welcomeSection__form {
+  border: 8px solid black;
+  padding: 20px 60px;
+  background-image: url(./Grafiki/12.jpg);
+  background-size: cover;
+  margin: auto auto;
+}
+
+.welcomeSection__form .form {
+  margin: 30px 0;
+}
+
+.welcomeSection__form .form__label {
+  display: block;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.welcomeSection__form .form__input {
+  border: none;
+  border-bottom: 2px solid white;
+  margin-top: 5px;
+  background: transparent;
+  padding: 5px 0;
+  color: white;
+}
+
+.welcomeSection__button {
+  margin: 20px 0;
+  padding: 10px 0;
+  width: 200px;
+  height: 70px;
+  cursor: pointer;
+  background-image: url(./Grafiki/12.jpg);
+  background-size: cover;
+  border: 5px solid black;
+  color: black;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0 auto;
+}
+
+.questionSection {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background-size: cover;
+  background-image: url(./Grafiki/tło.jpg);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 100px auto auto 100px;
+      grid-template-rows: 100px auto auto 100px;
+  text-align: center;
+  color: white;
+}
+
+.questionSection__header {
+  font-size: 64px;
+}
+
+.questionSection__points {
+  font-size: 24px;
+  margin: auto auto;
+}
+
+.questionSection__question {
+  font-size: 24px;
+}
+
+.questionSection__question h2 {
+  font-size: 32px;
+}
+
+.questionSection__button {
+  margin: 20px 0;
+  padding: 10px 0;
+  width: 200px;
+  height: 70px;
+  cursor: pointer;
+  background-image: url(./Grafiki/12.jpg);
+  background-size: cover;
+  border: 5px solid black;
+  color: black;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0 auto;
+}
+
+.femaleAnswerSection {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background-size: cover;
+  background-image: url(./Grafiki/tło.jpg);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 200px 100px auto 100px;
+      grid-template-rows: 200px 100px auto 100px;
+  text-align: center;
+  color: white;
+}
+
+.femaleAnswerSection__name {
+  font-size: 64px;
+}
+
+.femaleAnswerSection__question {
+  font-size: 48px;
+}
+
+.femaleAnswerSection__form {
+  font-size: 32px;
+}
+
+.femaleAnswerSection__button {
+  margin: 20px 0;
+  padding: 10px 0;
+  width: 200px;
+  height: 70px;
+  cursor: pointer;
+  background-image: url(./Grafiki/12.jpg);
+  background-size: cover;
+  border: 5px solid black;
+  color: black;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0 auto;
+}
+
+.maleAnswerSection {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background-size: cover;
+  background-image: url(./Grafiki/tło.jpg);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 200px 100px auto 100px;
+      grid-template-rows: 200px 100px auto 100px;
+  text-align: center;
+  color: white;
+}
+
+.maleAnswerSection__name {
+  font-size: 64px;
+}
+
+.maleAnswerSection__question {
+  font-size: 48px;
+}
+
+.maleAnswerSection__form {
+  font-size: 32px;
+}
+
+.maleAnswerSection__button {
+  margin: 20px 0;
+  padding: 10px 0;
+  width: 200px;
+  height: 70px;
+  cursor: pointer;
+  background-image: url(./Grafiki/12.jpg);
+  background-size: cover;
+  border: 5px solid black;
+  color: black;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0 auto;
+}
+
+.checkAnswerSection {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background-size: cover;
+  background-image: url(./Grafiki/tło.jpg);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 150px 100px auto auto 100px;
+      grid-template-rows: 150px 100px auto auto 100px;
+  text-align: center;
+  color: white;
+}
+
+.checkAnswerSection__header {
+  font-size: 54px;
+}
+
+.checkAnswerSection__question {
+  font-size: 40px;
+}
+
+.checkAnswerSection__answer {
+  text-align: center;
+}
+
+.checkAnswerSection__answer .writeAnswer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.checkAnswerSection__buttons {
+  text-align: center;
+}
+
+.finalSection {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background-size: cover;
+  background-image: url(./Grafiki/tło.jpg);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 150px 100px auto auto 100px;
+      grid-template-rows: 150px 100px auto auto 100px;
+  text-align: center;
+  color: white;
+}
+
+.finalSection__header {
+  font-size: 64px;
+}
+
+.finalSection__button {
+  margin: 20px 0;
+  padding: 10px 0;
+  width: 200px;
+  height: 70px;
+  cursor: pointer;
+  background-image: url(./Grafiki/12.jpg);
+  background-size: cover;
+  border: 5px solid black;
+  color: black;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=styles.css.map */

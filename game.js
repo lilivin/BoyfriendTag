@@ -66,7 +66,7 @@ function askQuestion() {
         } else {
             welcomeSection.style.display = 'none';
             checkAnswerSection.style.display = 'none';
-            questionSection.style.display = 'block';
+            questionSection.style.display = 'grid';
 
             document.getElementById('femalePointsContainer').innerHTML = `<b>${femaleName}:</b> ${femalePoints} punktów`;
             document.getElementById('malePointsContainer').innerHTML = `<b>${maleName}:</b> ${malePoints} punktów`;
@@ -82,7 +82,7 @@ startAnswerBtn.addEventListener('click', function() {
     document.getElementById('femaleRadioFormFemale').innerHTML = `${femaleName}`;
     document.getElementById('maleRadioFormFemale').innerHTML = `${maleName}`;
     questionSection.style.display = 'none';
-    femaleAnswerSection.style.display = 'block';
+    femaleAnswerSection.style.display = 'grid';
 })
 
 femaleAnswerBtn.addEventListener('click', function() {
@@ -94,7 +94,7 @@ femaleAnswerBtn.addEventListener('click', function() {
             alert("Zaznacz jedną z opcji!")
         } else {
             femaleAnswerSection.style.display = 'none';
-            maleAnswerSection.style.display = 'block';
+            maleAnswerSection.style.display = 'grid';
         }
     } else {
         aboutYouFemale = document.getElementById('aboutYouFemale').value;
@@ -103,7 +103,7 @@ femaleAnswerBtn.addEventListener('click', function() {
             alert('Wpisz odpowiedź!')
         } else {
             femaleAnswerSection.style.display = 'none';
-            maleAnswerSection.style.display = 'block';
+            maleAnswerSection.style.display = 'grid';
         }
     }
     
@@ -144,7 +144,7 @@ function checkWhoWin() {
             document.querySelector('input[name="femaleFormRadio"]:checked').checked = false;
 
             maleAnswerSection.style.display = 'none';
-            checkAnswerSection.style.display = 'block';
+            checkAnswerSection.style.display = 'grid';
         }
     } else {
         aboutYouMale = document.getElementById('aboutYouMale').value;
@@ -163,7 +163,7 @@ function checkWhoWin() {
             document.getElementById('aboutPartnerMaleShow').innerHTML = `${aboutPartnerMale}`;
             
             maleAnswerSection.style.display = 'none';
-            checkAnswerSection.style.display = 'block';
+            checkAnswerSection.style.display = 'grid';
         }
     }
 }

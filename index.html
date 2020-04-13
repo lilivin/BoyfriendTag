@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Baloo+2:400,500,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -14,23 +15,25 @@
 
 
     <section class="welcomeSection sectionStyle" id="welcomeSection">
-        <h1>BoyFriend Tag</h1>
-        <h2>Przedstawcie się</h2>
-        <form class="introduceForm">
-            <div>
-                <label for="female">Jak ma Pani na imię?</label>
-                <input id="female" type="text" required="required">
+        <h1 class="welcomeSection__header">BoyFriend Tag</h1>
+        <h2 class="welcomeSection__description">Zapraszamy!</h2>
+        <img src="Grafiki/boyTAG.png" class="welcomeSection__image--boy">
+        <img src="Grafiki/girlTAGv3.png" class="welcomeSection__image--girl">
+        <form class="welcomeSection__form">
+            <div class="form">
+                <label class="form__label" for="female">Imię Partnerki</label>
+                <input class="form__input" id="female" type="text" required="required">
             </div>
-            <div>
-                <label for="male">Jak ma Pan na imię?</label>
-                <input id="male" type="text">
+            <div class="form">
+                <label class="form__label" for="male">Imię Partnera</label>
+                <input class="form__input" id="male" type="text">
             </div>
-            <div>
-                <label for="howGames">Do ilu punktów gracie?</label>
-                <input id="howGames" type="number">
+            <div class="form">
+                <label class="form__label" for="howGames">Do ilu punktów gracie?</label>
+                <input class="form__input" id="howGames" type="number">
             </div>
         </form>
-        <button type="submit" id="submitNames" class="button bottomBtn">Start</button>
+        <button type="submit" id="submitNames" class="welcomeSection__button">Start</button>
     </section>
 
 
@@ -38,16 +41,16 @@
 
 
     <section id="questionSection" class="questionSection sectionStyle" style="display: none;">
-        <div class="points">
-            <h1>Punktacja</h1>
+        <h1 class="questionSection__header">Punktacja</h1>
+        <div class="questionSection__points">
             <div id="femalePointsContainer"></div>
             <div id="malePointsContainer"></div>
         </div>
-        <div class="question">
+        <div class="questionSection__question">
             <h2>Pytanie</h2>
             <div id="questionMain">Pytanie do Ciebie mordeczko jest właśnie takie</div>
-            <button id="startAnswer" class="button bottomBtn">Odpowiadamy</button>
         </div>
+        <button id="startAnswer" class="questionSection__button">Odpowiadamy</button>
     </section>
 
 
@@ -55,11 +58,11 @@
 
 
     <section id="femaleAnswerSection" class="femaleAnswerSection sectionStyle" style="display: none;">
-        <div id="answerFemaleName" class="answerFemaleName"></div>
-        <div id="questionFemale" class="questionFemale">
+        <div id="answerFemaleName" class="femaleAnswerSection__name"></div>
+        <div id="questionFemale" class="femaleAnswerSection__question">
             Pytanie dla tej pięknej Pani po drugiej stronie.
         </div>
-        <form id="femaleFormWrite" class="femaleForm" style="display: none;">
+        <form id="femaleFormWrite" class="femaleAnswerSection__form" style="display: none;">
             <div>
                 <label for="aboutYou">O Tobie</label>
                 <input type="text" id="aboutYouFemale">
@@ -69,7 +72,7 @@
                 <input type="text" id="aboutPartnerFemale">
             </div>
         </form>
-        <form id="femaleFormRadioForm" class="femaleForm" style="display: none;">
+        <form id="femaleFormRadioForm" class="femaleAnswerSection__form" style="display: none;">
             <div>
                 <label id="femaleRadioFormFemale" for="aboutYouFemale">O Tobie</label>
                 <input type="radio" name="femaleFormRadio" value="female" id="aboutYouFemale">
@@ -79,7 +82,7 @@
                 <input type="radio" name="femaleFormRadio" value="male" id="aboutPartnerFemale">
             </div>
         </form>
-        <button id="femaleAnswer" class="button bottomBtn">Odpowiedz</button>
+        <button id="femaleAnswer" class="femaleAnswerSection__button">Odpowiedz</button>
     </section>
 
 
@@ -87,11 +90,11 @@
 
 
     <section id="maleAnswerSection" class="maleAnswerSection sectionStyle" style="display: none;">
-        <div id="answerMaleName" class="answerMaleName"></div>
-        <div id="questionMale" class="questionMale">
+        <div id="answerMaleName" class="maleAnswerSection__name"></div>
+        <div id="questionMale" class="maleAnswerSection__question">
             Pytanie dla tego pięknego Pana po drugiej stronie.
         </div>
-        <form id="maleFormWrite" class="maleForm" style="display: none;">
+        <form id="maleFormWrite" class="maleAnswerSection__form" style="display: none;">
             <div>
                 <label for="aboutYou">O Tobie</label>
                 <input type="text" id="aboutYouMale">
@@ -101,7 +104,7 @@
                 <input type="text" id="aboutPartnerMale">
             </div>
         </form>
-        <form id="maleFormRadioForm" class="maleForm" style="display: none;">
+        <form id="maleFormRadioForm" class="maleAnswerSection__form" style="display: none;">
             <div>
                 <label id="maleRadioFormMale" for="aboutYou">O Tobie</label>
                 <input type="radio" value="male" name="maleFormRadio" id="aboutYouMale">
@@ -111,7 +114,7 @@
                 <input type="radio" value="female" name="maleFormRadio" id="aboutPartnerMale">
             </div>
         </form>
-        <button id="maleAnswer" class="button bottomBtn">Odpowiedz</button>
+        <button id="maleAnswer" class="maleAnswerSection__button">Odpowiedz</button>
     </section>
 
 
@@ -119,12 +122,12 @@
 
 
     <section id="checkAnswerSection" class="checkAnswerSection sectionStyle" style="display: none;">
-        <h2 class="checkAnswerHeader">I jak Wam poszło? </h2>
-        <div id="questionEnd" class="questionEnd"></div>
-        <div class="checkAnswerFemale">
+        <h2 class="checkAnswerSection__header">I jak Wam poszło? </h2>
+        <div id="questionEnd" class="checkAnswerSection__question"></div>
+        <div class="checkAnswerSection__answer">
             <h2 id="checkAnswerSectionFemaleName"></h2>
-            <div id="checkAnswerFemaleRadio"></div>
-            <div id= "checkAnswerFemaleWrite" class="checkAnswerFemale__data">
+            <div class="radioAnswer" id="checkAnswerFemaleRadio"></div>
+            <div class="writeAnswer" id= "checkAnswerFemaleWrite" class="checkAnswerFemale__data">
                 <div>
                     <h4>O Sobie</h4>
                     <p id="aboutYouFemaleShow"></p>
@@ -136,10 +139,10 @@
             </div>
         </div>
 
-        <div class="checkAnswerMale">
+        <div class="checkAnswerSection__answer">
             <h2 id="checkAnswerSectionMaleName"></h2>
-            <div id="checkAnswerMaleRadio"></div>
-            <div id= "checkAnswerMaleWrite" class="checkAnswerMale__data">
+            <div class="radioAnswer" id="checkAnswerMaleRadio"></div>
+            <div class="writeAnswer" id= "checkAnswerMaleWrite" class="checkAnswerMale__data">
                 <div>
                     <h4>O Sobie</h4>
                     <p id="aboutYouMaleShow"></p>
@@ -150,7 +153,7 @@
                 </div>
             </div>
         </div>
-        <div class="buttons">
+        <div class="checkAnswerSection__buttons">
             <h4>Kto odpowiedział dobrze:</h4>
             <div>
                 <button id="femaleCorrectBtn" class="button buttonFinal"></button>
@@ -165,8 +168,8 @@
 
 
     <section id="finalSection" class="finalSection sectionStyle" style="display: none;">
-        <h1>Wygrywa Karol</h1>
-        <button>Powrót do menu!</button>
+        <h1 class="finalSection__header">Wygrywa Karol</h1>
+        <button class="finalSection__button">Powrót do menu!</button>
     </section>
 </body>
 <script src="array.js"></script>
