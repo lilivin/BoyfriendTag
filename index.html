@@ -46,10 +46,12 @@
             <div id="femalePointsContainer"></div>
             <div id="malePointsContainer"></div>
         </div>
+        <!--
         <div class="questionSection__question">
             <h2>Pytanie</h2>
             <div id="questionMain">Pytanie do Ciebie mordeczko jest właśnie takie</div>
         </div>
+        -->
         <button id="startAnswer" class="questionSection__button">Odpowiadamy</button>
     </section>
 
@@ -59,10 +61,10 @@
 
     <section id="femaleAnswerSection" class="femaleAnswerSection sectionStyle" style="display: none;">
         <div id="answerFemaleName" class="femaleAnswerSection__name"></div>
-        <div id="questionFemale" class="femaleAnswerSection__question">
-            Pytanie dla tej pięknej Pani po drugiej stronie.
-        </div>
         <form id="femaleFormWrite" class="femaleAnswerSection__form" style="display: none;">
+            <div id="questionFemale">
+                Pytanie dla tej pięknej Pani po drugiej stronie.
+            </div>
             <div>
                 <label for="aboutYou">O Tobie</label>
                 <input type="text" id="aboutYouFemale">
@@ -73,6 +75,9 @@
             </div>
         </form>
         <form id="femaleFormRadioForm" class="femaleAnswerSection__form" style="display: none;">
+            <div id="questionFemale">
+                Pytanie dla tej pięknej Pani po drugiej stronie.
+            </div>
             <div>
                 <label id="femaleRadioFormFemale" for="aboutYouFemale">O Tobie</label>
                 <input type="radio" name="femaleFormRadio" value="female" id="aboutYouFemale">
@@ -91,10 +96,10 @@
 
     <section id="maleAnswerSection" class="maleAnswerSection sectionStyle" style="display: none;">
         <div id="answerMaleName" class="maleAnswerSection__name"></div>
-        <div id="questionMale" class="maleAnswerSection__question">
-            Pytanie dla tego pięknego Pana po drugiej stronie.
-        </div>
         <form id="maleFormWrite" class="maleAnswerSection__form" style="display: none;">
+            <div id="questionMale">
+                Pytanie dla tego pięknego Pana po drugiej stronie.
+            </div>
             <div>
                 <label for="aboutYou">O Tobie</label>
                 <input type="text" id="aboutYouMale">
@@ -105,6 +110,9 @@
             </div>
         </form>
         <form id="maleFormRadioForm" class="maleAnswerSection__form" style="display: none;">
+            <div id="questionMale">
+                Pytanie dla tego pięknego Pana po drugiej stronie.
+            </div>
             <div>
                 <label id="maleRadioFormMale" for="aboutYou">O Tobie</label>
                 <input type="radio" value="male" name="maleFormRadio" id="aboutYouMale">
@@ -123,44 +131,46 @@
 
     <section id="checkAnswerSection" class="checkAnswerSection sectionStyle" style="display: none;">
         <h2 class="checkAnswerSection__header">I jak Wam poszło? </h2>
-        <div id="questionEnd" class="checkAnswerSection__question"></div>
-        <div class="checkAnswerSection__answer">
-            <h2 id="checkAnswerSectionFemaleName"></h2>
-            <div class="radioAnswer" id="checkAnswerFemaleRadio"></div>
-            <div class="writeAnswer" id= "checkAnswerFemaleWrite" class="checkAnswerFemale__data">
-                <div>
-                    <h4>O Sobie</h4>
-                    <p id="aboutYouFemaleShow"></p>
-                </div>
-                <div>
-                    <h4>O Partnerze</h4>
-                    <p id="aboutPartnerFemaleShow"></p>
+        <div class="checkAnswerSection__answers">
+            <div id="questionEnd" class="question"></div>
+            <div class="answer">
+                <h2 id="checkAnswerSectionFemaleName"></h2>
+                <div class="radioAnswer" id="checkAnswerFemaleRadio"></div>
+                <div class="writeAnswer" id= "checkAnswerFemaleWrite" class="checkAnswerFemale__data">
+                    <div>
+                        <h4>O Sobie</h4>
+                        <p id="aboutYouFemaleShow"></p>
+                    </div>
+                    <div>
+                        <h4>O Partnerze</h4>
+                        <p id="aboutPartnerFemaleShow"></p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="checkAnswerSection__answer">
-            <h2 id="checkAnswerSectionMaleName"></h2>
-            <div class="radioAnswer" id="checkAnswerMaleRadio"></div>
-            <div class="writeAnswer" id= "checkAnswerMaleWrite" class="checkAnswerMale__data">
-                <div>
-                    <h4>O Sobie</h4>
-                    <p id="aboutYouMaleShow"></p>
+            <div class="answer">
+                <h2 id="checkAnswerSectionMaleName"></h2>
+                <div class="radioAnswer" id="checkAnswerMaleRadio"></div>
+                <div class="writeAnswer" id= "checkAnswerMaleWrite" class="checkAnswerMale__data">
+                    <div>
+                        <h4>O Sobie</h4>
+                        <p id="aboutYouMaleShow"></p>
+                    </div>
+                    <div>
+                        <h4>O Partnerce</h4>
+                        <p id="aboutPartnerMaleShow"></p>
+                    </div>
                 </div>
-                <div>
-                    <h4>O Partnerce</h4>
-                    <p id="aboutPartnerMaleShow"></p>
+            </div>
+            <div class="buttonsContainer">
+                <h4>Kto odpowiedział dobrze:</h4>
+                <div class="buttons">
+                    <button id="femaleCorrectBtn" class="button buttons__female"></button>
+                    <button id="bothCorrectBtn" class="button buttons__both"></button>
+                    <button id="maleCorrectBtn" class="button buttons__male"></button>
                 </div>
             </div>
         </div>
-        <div class="checkAnswerSection__buttons">
-            <h4>Kto odpowiedział dobrze:</h4>
-            <div>
-                <button id="femaleCorrectBtn" class="button buttonFinal"></button>
-                <button id="bothCorrectBtn" class="button buttonFinal"></button>
-                <button id="maleCorrectBtn" class="button buttonFinal"></button>
-            </div>
-        </div>      
     </section>
 
 

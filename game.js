@@ -43,18 +43,18 @@ function lotto() {
 
 function askQuestion() {
         lotto();
-        document.getElementById('questionMain').innerHTML = `${question}`;
+        //document.getElementById('questionMain').innerHTML = `${question}`;
         document.getElementById('questionFemale').innerHTML = `${question}`;
         document.getElementById('questionMale').innerHTML = `${question}`;
         document.getElementById('questionEnd').innerHTML = `${question}`;
         myArray.splice(questionNumber, 1);
 
         if (questionType == "radio") {
-            document.getElementById('femaleFormRadioForm').style.display = "block";
-            document.getElementById('maleFormRadioForm').style.display = "block";
+            document.getElementById('femaleFormRadioForm').style.display = "grid";
+            document.getElementById('maleFormRadioForm').style.display = "grid";
         } else {
-            document.getElementById('femaleFormWrite').style.display = "block";
-            document.getElementById('maleFormWrite').style.display = "block";
+            document.getElementById('femaleFormWrite').style.display = "grid";
+            document.getElementById('maleFormWrite').style.display = "grid";
         }
 
         femaleName = document.getElementById('female').value;

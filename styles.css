@@ -27,15 +27,18 @@ body {
 }
 
 .welcomeSection__header {
+  margin-top: 50px;
   font-family: 'Press Start 2P', cursive;
   font-size: 62px;
   text-shadow: -8px 0 black, 0 8px black, 8px 0 black, 0 -8px black;
 }
 
 .welcomeSection__description {
+  margin-top: 50px;
   font-family: 'Press Start 2P', cursive;
+  font-size: 62px;
+  text-shadow: -8px 0 black, 0 8px black, 8px 0 black, 0 -8px black;
   font-size: 42px;
-  text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;
 }
 
 .welcomeSection__image--boy {
@@ -58,9 +61,10 @@ body {
 
 .welcomeSection__form {
   border: 8px solid black;
+  width: 250px;
+  height: 280px;
   padding: 20px 60px;
-  background-image: url(./Grafiki/12.jpg);
-  background-size: cover;
+  background-color: #ebebeb;
   margin: auto auto;
 }
 
@@ -70,18 +74,18 @@ body {
 
 .welcomeSection__form .form__label {
   display: block;
-  color: white;
+  color: black;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 .welcomeSection__form .form__input {
   border: none;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid black;
   margin-top: 5px;
   background: transparent;
   padding: 5px 0;
-  color: white;
+  color: black;
 }
 
 .welcomeSection__button {
@@ -90,8 +94,7 @@ body {
   width: 200px;
   height: 70px;
   cursor: pointer;
-  background-image: url(./Grafiki/12.jpg);
-  background-size: cover;
+  background-color: #ebebeb;
   border: 5px solid black;
   color: black;
   font-weight: bold;
@@ -115,19 +118,38 @@ body {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 100px auto auto 100px;
-      grid-template-rows: 100px auto auto 100px;
+  -ms-grid-rows: 250px auto 100px;
+      grid-template-rows: 250px auto 100px;
   text-align: center;
   color: white;
 }
 
 .questionSection__header {
-  font-size: 64px;
+  margin-top: 50px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 62px;
+  text-shadow: -8px 0 black, 0 8px black, 8px 0 black, 0 -8px black;
 }
 
 .questionSection__points {
   font-size: 24px;
   margin: auto auto;
+  width: 250px;
+  height: 280px;
+  border: 8px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 20px 60px;
+  color: black;
+  background-color: #ebebeb;
 }
 
 .questionSection__question {
@@ -144,8 +166,7 @@ body {
   width: 200px;
   height: 70px;
   cursor: pointer;
-  background-image: url(./Grafiki/12.jpg);
-  background-size: cover;
+  background-color: #ebebeb;
   border: 5px solid black;
   color: black;
   font-weight: bold;
@@ -169,22 +190,40 @@ body {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 200px 100px auto 100px;
-      grid-template-rows: 200px 100px auto 100px;
+  -ms-grid-rows: 250px auto 100px;
+      grid-template-rows: 250px auto 100px;
   text-align: center;
   color: white;
 }
 
 .femaleAnswerSection__name {
-  font-size: 64px;
-}
-
-.femaleAnswerSection__question {
-  font-size: 48px;
+  margin-top: 50px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 62px;
+  text-shadow: -8px 0 black, 0 8px black, 8px 0 black, 0 -8px black;
 }
 
 .femaleAnswerSection__form {
-  font-size: 32px;
+  font-size: 24px;
+  margin: auto auto;
+  width: 250px;
+  height: 280px;
+  border: 8px solid black;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
+  padding: 20px 60px;
+  color: black;
+  background-color: #ebebeb;
+}
+
+.femaleAnswerSection__form input {
+  background-color: #ebebeb;
+  border: none;
+  border-bottom: 1px solid black;
 }
 
 .femaleAnswerSection__button {
@@ -193,8 +232,7 @@ body {
   width: 200px;
   height: 70px;
   cursor: pointer;
-  background-image: url(./Grafiki/12.jpg);
-  background-size: cover;
+  background-color: #ebebeb;
   border: 5px solid black;
   color: black;
   font-weight: bold;
@@ -218,22 +256,40 @@ body {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 200px 100px auto 100px;
-      grid-template-rows: 200px 100px auto 100px;
+  -ms-grid-rows: 250px auto 100px;
+      grid-template-rows: 250px auto 100px;
   text-align: center;
   color: white;
 }
 
 .maleAnswerSection__name {
-  font-size: 64px;
-}
-
-.maleAnswerSection__question {
-  font-size: 48px;
+  margin-top: 50px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 62px;
+  text-shadow: -8px 0 black, 0 8px black, 8px 0 black, 0 -8px black;
 }
 
 .maleAnswerSection__form {
-  font-size: 32px;
+  font-size: 24px;
+  margin: auto auto;
+  width: 250px;
+  height: 280px;
+  border: 8px solid black;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
+  padding: 20px 60px;
+  color: black;
+  background-color: #ebebeb;
+}
+
+.maleAnswerSection__form input {
+  background-color: #ebebeb;
+  border: none;
+  border-bottom: 1px solid black;
 }
 
 .maleAnswerSection__button {
@@ -242,8 +298,7 @@ body {
   width: 200px;
   height: 70px;
   cursor: pointer;
-  background-image: url(./Grafiki/12.jpg);
-  background-size: cover;
+  background-color: #ebebeb;
   border: 5px solid black;
   color: black;
   font-weight: bold;
@@ -267,25 +322,42 @@ body {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 150px 100px auto auto 100px;
-      grid-template-rows: 150px 100px auto auto 100px;
+  -ms-grid-rows: 250px auto 100px;
+      grid-template-rows: 250px auto 100px;
   text-align: center;
   color: white;
 }
 
 .checkAnswerSection__header {
-  font-size: 54px;
+  margin-top: 50px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 62px;
+  text-shadow: -8px 0 black, 0 8px black, 8px 0 black, 0 -8px black;
 }
 
-.checkAnswerSection__question {
+.checkAnswerSection__answers {
+  border: 8px solid black;
+  background-color: white;
+  color: black;
+  width: 700px;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 100px auto auto 140px;
+      grid-template-rows: 100px auto auto 140px;
+}
+
+.checkAnswerSection__answers .question {
   font-size: 40px;
 }
 
-.checkAnswerSection__answer {
+.checkAnswerSection__answers .answer {
   text-align: center;
 }
 
-.checkAnswerSection__answer .writeAnswer {
+.checkAnswerSection__answers .answer .writeAnswer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -294,8 +366,40 @@ body {
           justify-content: space-evenly;
 }
 
-.checkAnswerSection__buttons {
+.checkAnswerSection__answers .buttonsContainer {
   text-align: center;
+}
+
+.checkAnswerSection__answers .buttonsContainer h4 {
+  height: 30px;
+}
+
+.checkAnswerSection__answers .buttonsContainer .buttons {
+  height: 70px;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+}
+
+.checkAnswerSection__answers .buttonsContainer .buttons .button {
+  border: 1px solid black;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.checkAnswerSection__answers .buttonsContainer .buttons__female {
+  background-color: lightcoral;
+}
+
+.checkAnswerSection__answers .buttonsContainer .buttons__both {
+  background-color: lightgreen;
+}
+
+.checkAnswerSection__answers .buttonsContainer .buttons__male {
+  background-color: lightskyblue;
 }
 
 .finalSection {
@@ -330,8 +434,7 @@ body {
   width: 200px;
   height: 70px;
   cursor: pointer;
-  background-image: url(./Grafiki/12.jpg);
-  background-size: cover;
+  background-color: #ebebeb;
   border: 5px solid black;
   color: black;
   font-weight: bold;
