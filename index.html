@@ -12,13 +12,12 @@
 
 
     <!-- Welcome Section -->
+    <img src="Grafiki/boyTAG.png" class="image__boy">
+    <img src="Grafiki/girlTAGv3.png" class="image__girl">
 
-
-    <section class="welcomeSection sectionStyle" id="welcomeSection">
+    <section class="welcomeSection sectionStyle" id="welcomeSection" style="display: grid;">
         <h1 class="welcomeSection__header">BoyFriend Tag</h1>
         <h2 class="welcomeSection__description">Zapraszamy!</h2>
-        <img src="Grafiki/boyTAG.png" class="welcomeSection__image--boy">
-        <img src="Grafiki/girlTAGv3.png" class="welcomeSection__image--girl">
         <form class="welcomeSection__form">
             <div class="form">
                 <label class="form__label" for="female">Imię Partnerki</label>
@@ -133,10 +132,10 @@
         <h2 class="checkAnswerSection__header">I jak Wam poszło? </h2>
         <div class="checkAnswerSection__answers">
             <div id="questionEnd" class="question"></div>
-            <div class="answer">
+            <div class="answer--male">
                 <h2 id="checkAnswerSectionFemaleName"></h2>
                 <div class="radioAnswer" id="checkAnswerFemaleRadio"></div>
-                <div class="writeAnswer" id= "checkAnswerFemaleWrite" class="checkAnswerFemale__data">
+                <div class="writeAnswer" id= "checkAnswerFemaleWrite">
                     <div>
                         <h4>O Sobie</h4>
                         <p id="aboutYouFemaleShow"></p>
@@ -148,10 +147,10 @@
                 </div>
             </div>
 
-            <div class="answer">
+            <div class="answer--female">
                 <h2 id="checkAnswerSectionMaleName"></h2>
                 <div class="radioAnswer" id="checkAnswerMaleRadio"></div>
-                <div class="writeAnswer" id= "checkAnswerMaleWrite" class="checkAnswerMale__data">
+                <div class="writeAnswer" id= "checkAnswerMaleWrite">
                     <div>
                         <h4>O Sobie</h4>
                         <p id="aboutYouMaleShow"></p>
