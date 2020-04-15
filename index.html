@@ -131,41 +131,46 @@
     <section id="checkAnswerSection" class="checkAnswerSection sectionStyle" style="display: none;">
         <h2 class="checkAnswerSection__header">I jak Wam poszło? </h2>
         <div class="checkAnswerSection__answers">
-            <div id="questionEnd" class="question"></div>
-            <div class="answer--male">
-                <h2 id="checkAnswerSectionFemaleName"></h2>
-                <div class="radioAnswer" id="checkAnswerFemaleRadio"></div>
-                <div class="writeAnswer" id= "checkAnswerFemaleWrite">
-                    <div>
-                        <h4>O Sobie</h4>
-                        <p id="aboutYouFemaleShow"></p>
-                    </div>
-                    <div>
-                        <h4>O Partnerze</h4>
-                        <p id="aboutPartnerFemaleShow"></p>
+            <div  class="question">
+                <h4>Sprawdźmy kto dobrze odpowiedział na pytanie...</h4>
+                <div id="questionEnd"></div>
+            </div>
+            <div class="answers">
+                <div class="answer--male">
+                    <h2 id="checkAnswerSectionFemaleName"></h2>
+                    <div class="radioAnswer" id="checkAnswerFemaleRadio"></div>
+                    <div class="writeAnswer" id= "checkAnswerFemaleWrite">
+                        <div>
+                            <h4>O Sobie</h4>
+                            <p id="aboutYouFemaleShow"></p>
+                        </div>
+                        <div>
+                            <h4>O Partnerze</h4>
+                            <p id="aboutPartnerFemaleShow"></p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="answer--female">
-                <h2 id="checkAnswerSectionMaleName"></h2>
-                <div class="radioAnswer" id="checkAnswerMaleRadio"></div>
-                <div class="writeAnswer" id= "checkAnswerMaleWrite">
-                    <div>
-                        <h4>O Sobie</h4>
-                        <p id="aboutYouMaleShow"></p>
-                    </div>
-                    <div>
-                        <h4>O Partnerce</h4>
-                        <p id="aboutPartnerMaleShow"></p>
+                <div class="answer--female">
+                    <h2 id="checkAnswerSectionMaleName"></h2>
+                    <div class="radioAnswer" id="checkAnswerMaleRadio"></div>
+                    <div class="writeAnswer" id= "checkAnswerMaleWrite">
+                        <div>
+                            <h4>O Sobie</h4>
+                            <p id="aboutYouMaleShow"></p>
+                        </div>
+                        <div>
+                            <h4>O Partnerce</h4>
+                            <p id="aboutPartnerMaleShow"></p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="buttonsContainer">
-                <h4>Kto odpowiedział dobrze:</h4>
+            <div class="buttonsSection">
                 <div class="buttons">
                     <button id="femaleCorrectBtn" class="button buttons__female"></button>
-                    <button id="bothCorrectBtn" class="button buttons__both"></button>
+                    <button id="bothCorrectBtn" class="button buttons__both">Oboje</button>
+                    <button id="nobodyCorrectBtn" class="button buttons__both">Nikt</button>
                     <button id="maleCorrectBtn" class="button buttons__male"></button>
                 </div>
             </div>

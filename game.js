@@ -5,6 +5,7 @@ const maleAnswerBtn = document.getElementById('maleAnswer');
 
 const maleCorrectBtn = document.getElementById('maleCorrectBtn');
 const bothCorrectBtn = document.getElementById('bothCorrectBtn');
+const nobodyCorrectBtn = document.getElementById('nobodyCorrectBtn');
 const femaleCorrectBtn = document.getElementById('femaleCorrectBtn');
 
 const welcomeSection = document.getElementById('welcomeSection');
@@ -116,7 +117,6 @@ function checkWhoWin() {
     document.getElementById('checkAnswerSectionMaleName').innerHTML = `${maleName}`;
 
     maleCorrectBtn.innerHTML = `${maleName}`;
-    bothCorrectBtn.innerHTML = `Oboje`;
     femaleCorrectBtn.innerHTML = `${femaleName}`;
 
     if (questionType == "radio") {
@@ -152,8 +152,8 @@ function checkWhoWin() {
         if (aboutYouMale == '' || aboutPartnerMale == '') {
             alert('Wpisz odpowiedź!')
         } else {
-            document.getElementById('checkAnswerFemaleWrite').style.display = "flex";
-            document.getElementById('checkAnswerMaleWrite').style.display = "flex";
+            document.getElementById('checkAnswerFemaleWrite').style.display = "block";
+            document.getElementById('checkAnswerMaleWrite').style.display = "block";
             document.getElementById('checkAnswerMaleRadio').style.display = "none";
             document.getElementById('checkAnswerFemaleRadio').style.display = "none";
 
@@ -193,7 +193,16 @@ bothCorrectBtn.addEventListener('click', function() {
     } else {
         askQuestion();
     }
-    
+})
+
+nobodyCorrectBtn.addEventListener('click', function() {
+    refreshInputs();
+    if((malePoints >= howGames) || (femalePoints >= howGames)){
+        checkAnswerSection.style.display = "none";
+        finalSection.style.display = "block";
+    } else {
+        askQuestion();
+    }
 })
 
 femaleCorrectBtn.addEventListener('click', function() {
