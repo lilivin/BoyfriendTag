@@ -1,0 +1,29 @@
+@mixin sectionStyle {
+    
+}
+
+@mixin textBorder {
+    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+}
+
+@mixin button {
+    margin: 20px 0;
+    padding: 10px 0;
+    width: 300px;
+    height: 70px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: 5px solid white;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 0 auto;
+    font-family: 'Press Start 2P', cursive;
+}
+
+@mixin header {
+    margin-top: 50px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 62px;
+    text-shadow: -6px 0 black, 0 6px black, 6px 0 black, 0 -6px black;
+}

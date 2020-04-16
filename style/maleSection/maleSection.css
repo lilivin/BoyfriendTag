@@ -1,0 +1,134 @@
+.maleAnswerSection {
+  max-width: 100vw;
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 100px auto 100px;
+      grid-template-rows: 100px auto 100px;
+  text-align: center;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.maleAnswerSection__name {
+  margin-top: 50px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 62px;
+  text-shadow: -6px 0 black, 0 6px black, 6px 0 black, 0 -6px black;
+}
+
+@media (max-width: 1152px) {
+  .maleAnswerSection__name {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 560px) {
+  .maleAnswerSection__name {
+    font-size: 32px;
+    line-height: 3.4rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .maleAnswerSection__name {
+    margin-top: 5px;
+    font-size: 26px;
+  }
+}
+
+.maleAnswerSection__form {
+  font-size: 24px;
+  margin: auto auto;
+  width: 500px;
+  height: 320px;
+  border: 8px solid black;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
+  color: black;
+  background-color: dodgerblue;
+}
+
+.maleAnswerSection__form div {
+  margin: auto auto;
+}
+
+.maleAnswerSection__form div input {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  border-bottom: 2px solid black;
+  margin-top: 5px;
+  background: transparent;
+  padding: 5px 0;
+  color: black;
+}
+
+.maleAnswerSection__form--radio {
+  font-size: 24px;
+  margin: auto auto;
+  width: 500px;
+  height: 320px;
+  border: 8px solid black;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
+  color: black;
+  background-color: dodgerblue;
+}
+
+.maleAnswerSection__form--radio input {
+  display: inline;
+}
+
+@media (max-width: 560px) {
+  .maleAnswerSection__form--radio {
+    width: 400px;
+  }
+}
+
+@media (max-width: 420px) {
+  .maleAnswerSection__form--radio {
+    height: 300px;
+    width: 300px;
+  }
+}
+
+@media (max-width: 560px) {
+  .maleAnswerSection__form {
+    width: 400px;
+  }
+}
+
+@media (max-width: 420px) {
+  .maleAnswerSection__form {
+    height: 300px;
+    width: 300px;
+  }
+}
+
+.maleAnswerSection__button {
+  margin: 20px 0;
+  padding: 10px 0;
+  width: 300px;
+  height: 70px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  border: 5px solid white;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0 auto;
+  font-family: 'Press Start 2P', cursive;
+}
+/*# sourceMappingURL=maleSection.css.map */

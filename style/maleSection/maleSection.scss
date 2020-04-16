@@ -1,0 +1,89 @@
+@import '../mixins.scss';
+
+
+.maleAnswerSection {
+    max-width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px auto 100px;
+    text-align: center;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    &__name {
+        @include header();
+
+        @media(max-width: 1152px) {
+            font-size: 42px;
+        }
+
+        @media(max-width: 560px) {
+            font-size: 32px;
+            line-height: 3.4rem;
+        }
+        @media(max-width: 350px) {
+            margin-top: 5px;
+            font-size: 26px;
+        }
+    }
+    &__form {
+        font-size: 24px;
+        margin: auto auto;
+        width: 500px;
+        height: 320px;
+        border: 8px solid black;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        color: black;
+        background-color: dodgerblue;
+        div {
+            margin: auto auto;
+            input {
+                display: block;
+                margin: 0 auto;
+                border: none;
+                border-bottom: 2px solid black;
+                margin-top: 5px;
+                background: transparent;
+                padding: 5px 0;
+                color: black;
+            }
+        }
+        &--radio {
+            font-size: 24px;
+            margin: auto auto;
+            width: 500px;
+            height: 320px;
+            border: 8px solid black;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+            color: black;
+            background-color: dodgerblue;
+            input {
+                display: inline;
+            }
+            @media(max-width: 560px) {
+                width: 400px;
+            }
+        
+            @media(max-width: 420px) {
+                height: 300px;
+                width: 300px;
+            }
+        }
+        @media(max-width: 560px) {
+            width: 400px;
+        }
+    
+        @media(max-width: 420px) {
+            height: 300px;
+            width: 300px;
+        }
+    }
+    &__button {
+        @include button();
+    }
+}

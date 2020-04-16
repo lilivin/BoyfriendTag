@@ -1,0 +1,23 @@
+@import '../mixins.scss';
+
+.finalSection {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 100px auto auto 100px;
+    text-align: center;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    &__header {
+        font-size: 64px;
+    }
+    &__button {
+        @include button();
+    }
+}

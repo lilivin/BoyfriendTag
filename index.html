@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./style/welcomeSection/welcomeSection.css">
+    <link rel="stylesheet" href="./style/questionSection/questionSection.css">
+    <link rel="stylesheet" href="./style/femaleSection/femaleSection.css">
+    <link rel="stylesheet" href="./style/maleSection/maleSection.css">
+    <link rel="stylesheet" href="./style/checkAnswerSection/checkAnswerSection.css">
+    <link rel="stylesheet" href="./style/finalSection/finalSection.css">
+    <link rel="stylesheet" href="./style/checkAnswerSection/checkAnswerSection.css">
     <link href="https://fonts.googleapis.com/css?family=Baloo+2:400,500,700&display=swap&subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
@@ -12,12 +18,9 @@
 
 
     <!-- Welcome Section -->
-    <img src="Grafiki/boyTAG.png" class="image__boy">
-    <img src="Grafiki/girlTAGv3.png" class="image__girl">
 
     <section class="welcomeSection sectionStyle" id="welcomeSection" style="display: grid;">
         <h1 class="welcomeSection__header">BoyFriend Tag</h1>
-        <h2 class="welcomeSection__description">Zapraszamy!</h2>
         <form class="welcomeSection__form">
             <div class="form">
                 <label class="form__label" for="female">Imię Partnerki</label>
@@ -73,17 +76,17 @@
                 <input type="text" id="aboutPartnerFemale">
             </div>
         </form>
-        <form id="femaleFormRadioForm" class="femaleAnswerSection__form" style="display: none;">
+        <form id="femaleFormRadioForm" class="femaleAnswerSection__form--radio" style="display: none;">
             <div id="questionFemale">
                 Pytanie dla tej pięknej Pani po drugiej stronie.
             </div>
             <div>
-                <label id="femaleRadioFormFemale" for="aboutYouFemale">O Tobie</label>
                 <input type="radio" name="femaleFormRadio" value="female" id="aboutYouFemale">
+                <label id="femaleRadioFormFemale" for="aboutYouFemale">O Tobie</label>
             </div>
             <div>
-                <label id="maleRadioFormFemale" for="aboutPartnerFemale">O Partnerze</label>
                 <input type="radio" name="femaleFormRadio" value="male" id="aboutPartnerFemale">
+                <label id="maleRadioFormFemale" for="aboutPartnerFemale">O Partnerze</label>
             </div>
         </form>
         <button id="femaleAnswer" class="femaleAnswerSection__button">Odpowiedz</button>
@@ -108,17 +111,17 @@
                 <input type="text" id="aboutPartnerMale">
             </div>
         </form>
-        <form id="maleFormRadioForm" class="maleAnswerSection__form" style="display: none;">
+        <form id="maleFormRadioForm" class="maleAnswerSection__form--radio" style="display: none;">
             <div id="questionMale">
                 Pytanie dla tego pięknego Pana po drugiej stronie.
             </div>
             <div>
-                <label id="maleRadioFormMale" for="aboutYou">O Tobie</label>
                 <input type="radio" value="male" name="maleFormRadio" id="aboutYouMale">
+                <label id="maleRadioFormMale" for="aboutYou">O Tobie</label>
             </div>
             <div>
-                <label id="femaleRadioFormMale" for="aboutPartner">O Partnerce</label>
                 <input type="radio" value="female" name="maleFormRadio" id="aboutPartnerMale">
+                <label id="femaleRadioFormMale" for="aboutPartner">O Partnerce</label>
             </div>
         </form>
         <button id="maleAnswer" class="maleAnswerSection__button">Odpowiedz</button>

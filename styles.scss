@@ -177,6 +177,22 @@ body {
             padding: 5px 0;
             color: black;
         }
+        &--radio {
+            font-size: 24px;
+            margin: auto auto;
+            width: 500px;
+            height: 280px;
+            border: 8px solid black;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+            padding: 20px 60px;
+            color: black;
+            background-color: deeppink;
+            input {
+                display: inline;
+            }
+        }
     }
     &__button {
         @include button();
@@ -215,6 +231,22 @@ body {
             background: transparent;
             padding: 5px 0;
             color: black;
+        }
+        &--radio {
+            font-size: 24px;
+            margin: auto auto;
+            width: 500px;
+            height: 280px;
+            border: 8px solid black;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+            padding: 20px 60px;
+            color: black;
+            background-color: dodgerblue;
+            input {
+                display: inline;
+            }
         }
     }
     &__button {

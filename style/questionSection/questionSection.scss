@@ -1,0 +1,58 @@
+@import '../mixins.scss';
+
+.questionSection {
+    max-width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px auto 100px;
+    text-align: center;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    &__header {
+        @include header();
+
+        @media(max-width: 1152px) {
+            font-size: 42px;
+        }
+
+        @media(max-width: 560px) {
+            font-size: 32px;
+            line-height: 3.4rem;
+        }
+        @media(max-width: 350px) {
+            font-size: 32px;
+            margin-top: 10px;
+        }
+    }
+    &__points {
+        font-size: 24px;
+        margin: auto auto;
+        width: 500px;
+        height: 280px;
+        border: 8px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        color: black;
+        background-color: #ebebeb;
+        @media(max-width: 560px) {
+            width: 400px;
+        }
+    
+        @media(max-width: 420px) {
+            height: 300px;
+            width: 300px;
+        }
+    }
+    &__question {
+        h2 {
+            font-size: 32px;
+        }
+        font-size: 24px;
+    }
+    &__button {
+        @include button();
+    }
+}
