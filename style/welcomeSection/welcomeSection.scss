@@ -27,10 +27,10 @@ body {
         @media(max-width: 560px) {
             font-size: 32px;
             line-height: 3.4rem;
+            margin-top: 5px;
         }
         @media(max-width: 350px) {
             font-size: 32px;
-            margin: 0;
         }
     }
     &__form {

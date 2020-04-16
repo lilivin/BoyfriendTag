@@ -20,6 +20,7 @@
         @media(max-width: 560px) {
             font-size: 32px;
             line-height: 3.4rem;
+            margin-top: 5px;
         }
         @media(max-width: 350px) {
             margin-top: 5px;
@@ -61,6 +62,9 @@
             grid-template-rows: auto auto auto;
             color: black;
             background-color: deeppink;
+            .questionRadio {
+                margin-top: 5px;
+            }
             input {
                 display: inline;
             }

@@ -30,6 +30,7 @@
   .maleAnswerSection__name {
     font-size: 32px;
     line-height: 3.4rem;
+    margin-top: 5px;
   }
 }
 
@@ -88,6 +89,10 @@
   background-color: dodgerblue;
 }
 
+.maleAnswerSection__form--radio .questionRadio {
+  margin-top: 5px;
+}
+
 .maleAnswerSection__form--radio input {
   display: inline;
 }
@@ -119,7 +124,6 @@
 }
 
 .maleAnswerSection__button {
-  margin: 20px 0;
   padding: 10px 0;
   width: 300px;
   height: 70px;
@@ -129,7 +133,7 @@
   border: 5px solid white;
   font-weight: bold;
   font-size: 24px;
-  margin: 0 auto;
+  margin: 8px auto;
   font-family: 'Press Start 2P', cursive;
 }
 
