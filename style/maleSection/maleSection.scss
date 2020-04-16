@@ -40,6 +40,7 @@
         background-color: dodgerblue;
         div {
             margin: auto auto;
+            width: 100%;
             input {
                 display: block;
                 margin: 0 auto;
@@ -85,5 +86,8 @@
     }
     &__button {
         @include button();
+    }
+    @media(max-width: 560px) {
+        grid-template-rows: auto auto auto;
     }
 }

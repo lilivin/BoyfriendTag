@@ -55,4 +55,7 @@
     &__button {
         @include button();
     }
+    @media(max-width: 560px) {
+        grid-template-rows: auto auto auto;
+    }
 }
