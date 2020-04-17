@@ -57,6 +57,10 @@
   background-color: deeppink;
 }
 
+.femaleAnswerSection__form .questionWrite {
+  line-height: 1.8rem;
+}
+
 .femaleAnswerSection__form div {
   margin: auto auto;
 }
@@ -90,6 +94,7 @@
 
 .femaleAnswerSection__form--radio .questionRadio {
   margin-top: 5px;
+  line-height: 1.8rem;
 }
 
 .femaleAnswerSection__form--radio input {

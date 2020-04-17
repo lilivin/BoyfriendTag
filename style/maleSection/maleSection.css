@@ -57,6 +57,10 @@
   background-color: dodgerblue;
 }
 
+.maleAnswerSection__form .questionWrite {
+  line-height: 1.8rem;
+}
+
 .maleAnswerSection__form div {
   margin: auto auto;
   width: 100%;
@@ -91,6 +95,7 @@
 
 .maleAnswerSection__form--radio .questionRadio {
   margin-top: 5px;
+  line-height: 1.8rem;
 }
 
 .maleAnswerSection__form--radio input {

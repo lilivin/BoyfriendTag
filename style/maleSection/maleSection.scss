@@ -39,6 +39,9 @@
         grid-template-rows: auto auto auto;
         color: black;
         background-color: dodgerblue;
+        .questionWrite {
+            line-height: 1.8rem;
+        }
         div {
             margin: auto auto;
             width: 100%;
@@ -66,6 +69,7 @@
             background-color: dodgerblue;
             .questionRadio {
                 margin-top: 5px;
+                line-height: 1.8rem;
             }
             input {
                 display: inline;

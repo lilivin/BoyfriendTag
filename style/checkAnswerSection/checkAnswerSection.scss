@@ -8,34 +8,13 @@ body {
     width: 100vw;
     min-height: 100vh;
     display: grid;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
     grid-template-columns: 1fr;
-    grid-template-rows: 150px auto;
+    grid-template-rows: auto auto;
     text-align: center;
     color: white;
     font-family: 'Press Start 2P', cursive;
-    margin-bottom: 50px;
-    &__header {
-        @include header();
-
-        @media(max-width: 1152px) {
-            font-size: 42px;
-        }
-
-        @media(max-width: 560px) {
-            font-size: 32px;
-            line-height: 3.4rem;
-            margin-top: 5px;
-        }
-        @media(max-width: 350px) {
-            margin-top: 5px;
-            font-size: 26px;
-        }
-    }
+    margin: 30px 0;
     &__answers {
         width: 700px;
         min-height: 500px;
@@ -45,7 +24,7 @@ body {
         margin: auto auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 150px auto 58px;
+        grid-template-rows: auto auto;
         font-family: 'Press Start 2P', cursive;
         .question {
             grid-row: 1/2;
@@ -54,7 +33,7 @@ body {
             background-color: black;
             font-family: 'Press Start 2P', cursive;
             color: white;
-            padding-bottom: 15px;
+            padding: 0 7px 10px 7px;
             h4 {
                 font-family: 'Press Start 2P', cursive;
                 font-size: 14px;
@@ -66,7 +45,7 @@ body {
             grid-column: 1/3;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto;
+            grid-template-rows: auto auto;
             .answer--male {
                 grid-column: 1/2;
                 background-color: dodgerblue;
@@ -161,10 +140,7 @@ body {
             height: auto;
         }
         @media(max-width: 650px) {
-            grid-template-rows: auto auto auto;
+            grid-template-rows: auto auto;
         }
-    }
-    @media(max-width: 560px) {
-        grid-template-rows: auto auto;
     }
 }
