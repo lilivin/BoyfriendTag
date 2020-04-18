@@ -44,7 +44,6 @@ function lotto() {
 
 function askQuestion() {
         lotto();
-        //document.getElementById('questionMain').innerHTML = `${question}`;
         document.getElementById('questionFemale').innerHTML = `${question}`;
         document.getElementById('questionMale').innerHTML = `${question}`;
         document.getElementById('questionEnd').innerHTML = `${question}`;
@@ -53,17 +52,25 @@ function askQuestion() {
         if (questionType == "radio") {
             document.getElementById('femaleFormRadioForm').style.display = "grid";
             document.getElementById('maleFormRadioForm').style.display = "grid";
+            console.log('radio')
         } else {
             document.getElementById('femaleFormWrite').style.display = "grid";
             document.getElementById('maleFormWrite').style.display = "grid";
+            console.log('write')
         }
+        
+}
 
-        femaleName = document.getElementById('female').value;
-        maleName = document.getElementById('male').value;
-        howGames = document.getElementById('howGames').value;
+function validation() {
+    femaleName = document.getElementById('female').value;
+    maleName = document.getElementById('male').value;
+    howGames = document.getElementById('howGames').value;
 
-        if(femaleName == '' || maleName == '' || howGames == 0) {
-            alert('Wpisz imiona i liczbę punktów po której zakończy się gra')
+    if(femaleName == '' || maleName == '' || howGames == 0) {
+        alert('Wpisz imiona i liczbę punktów po której zakończy się gra')
+    } else {
+        if(femaleName.length >= 8 || maleName >= 8 ) {
+            alert('Imie może mieć maksymalnie 8 liter.')
         } else {
             welcomeSection.style.display = 'none';
             checkAnswerSection.style.display = 'none';
@@ -71,10 +78,12 @@ function askQuestion() {
 
             document.getElementById('femalePointsContainer').innerHTML = `<b>${femaleName}:</b> ${femalePoints} punktów`;
             document.getElementById('malePointsContainer').innerHTML = `<b>${maleName}:</b> ${malePoints} punktów`;
+            askQuestion();
         }
+    }
 }
 
-submitNamesBtn.addEventListener('click', askQuestion)
+submitNamesBtn.addEventListener('click', validation);
 
 startAnswerBtn.addEventListener('click', function() {
     document.getElementById('answerFemaleName').innerHTML = `Odpowiada <b>${femaleName}</b>`;
@@ -178,7 +187,7 @@ maleCorrectBtn.addEventListener('click', function() {
         checkAnswerSection.style.display = "none";
         finalSection.style.display = "block";
     } else {
-        askQuestion();
+        validation();
     }
     
 })
@@ -191,7 +200,7 @@ bothCorrectBtn.addEventListener('click', function() {
         checkAnswerSection.style.display = "none";
         finalSection.style.display = "block";
     } else {
-        askQuestion();
+        validation();
     }
 })
 
@@ -201,7 +210,7 @@ nobodyCorrectBtn.addEventListener('click', function() {
         checkAnswerSection.style.display = "none";
         finalSection.style.display = "block";
     } else {
-        askQuestion();
+        validation();
     }
 })
 
@@ -212,7 +221,7 @@ femaleCorrectBtn.addEventListener('click', function() {
         checkAnswerSection.style.display = "none";
         finalSection.style.display = "block";
     } else {
-        askQuestion();
+        validation();
     }
     
 })
