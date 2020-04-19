@@ -71,8 +71,13 @@
                 margin-top: 5px;
                 line-height: 1.8rem;
             }
-            input {
-                display: inline;
+            .radioInput {
+                display: flex; 
+                align-items: center; 
+                justify-content: center;
+                input {
+                    margin-right: 10px;
+                }
             }
             @media(max-width: 560px) {
                 width: 400px;

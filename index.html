@@ -23,15 +23,15 @@
         <h1 class="welcomeSection__header">BoyFriend Tag</h1>
         <form class="welcomeSection__form">
             <div class="form">
-                <label class="form__label" for="female">Imię Partnerki</label>
+                <label class="form__label" for="female">Imie Partnerki</label>
                 <input class="form__input" id="female" type="text" required="required">
             </div>
             <div class="form">
-                <label class="form__label" for="male">Imię Partnera</label>
+                <label class="form__label" for="male">Imie Partnera</label>
                 <input class="form__input" id="male" type="text">
             </div>
             <div class="form">
-                <label class="form__label" for="howGames">Do ilu punktów gracie?</label>
+                <label class="form__label" for="howGames">Do ilu punktow gracie?</label>
                 <input class="form__input" id="howGames" type="number">
             </div>
         </form>
@@ -64,7 +64,7 @@
     <section id="femaleAnswerSection" class="femaleAnswerSection sectionStyle" style="display: none;">
         <div id="answerFemaleName" class="femaleAnswerSection__name"></div>
         <form id="femaleFormWrite" class="femaleAnswerSection__form" style="display: none;">
-            <div class="questionWrite" id="questionFemale">
+            <div class="questionWrite" id="questionFemaleWrite">
                 Pytanie dla tej pięknej Pani po drugiej stronie.
             </div>
             <div>
@@ -77,16 +77,15 @@
             </div>
         </form>
         <form id="femaleFormRadioForm" class="femaleAnswerSection__form--radio" style="display: none;">
-            <div class="questionRadio" id="questionFemale">
-                Pytanie dla tej pięknej Pani po drugiej stronie.
+            <div class="questionRadio" id="questionFemaleRadio">
             </div>
-            <div>
-                <input type="radio" name="femaleFormRadio" value="female" id="aboutYouFemale">
-                <label id="femaleRadioFormFemale" for="aboutYouFemale">O Tobie</label>
+            <div class="radioInput">
+                <input type="radio" name="femaleFormRadio" value="female" id="aboutYouFemaleRadio">
+                <label id="femaleRadioFormFemale" for="aboutYouFemaleRadio">O Tobie</label>
             </div>
-            <div>
-                <input type="radio" name="femaleFormRadio" value="male" id="aboutPartnerFemale">
-                <label id="maleRadioFormFemale" for="aboutPartnerFemale">O Partnerze</label>
+            <div class="radioInput">
+                <input type="radio" name="femaleFormRadio" value="male" id="aboutPartnerFemaleRadio">
+                <label id="maleRadioFormFemale" for="aboutPartnerFemaleRadio">O Partnerze</label>
             </div>
         </form>
         <button id="femaleAnswer" class="femaleAnswerSection__button">Odpowiedz</button>
@@ -99,7 +98,7 @@
     <section id="maleAnswerSection" class="maleAnswerSection sectionStyle" style="display: none;">
         <div id="answerMaleName" class="maleAnswerSection__name"></div>
         <form id="maleFormWrite" class="maleAnswerSection__form" style="display: none;">
-            <div class="questionWrite" id="questionMale">
+            <div class="questionWrite" id="questionMaleWrite">
                 Pytanie dla tego pięknego Pana po drugiej stronie.
             </div>
             <div>
@@ -112,16 +111,16 @@
             </div>
         </form>
         <form id="maleFormRadioForm" class="maleAnswerSection__form--radio" style="display: none;">
-            <div class="questionRadio" id="questionMale">
+            <div class="questionRadio" id="questionMaleRadio">
                 Pytanie dla tego pięknego Pana po drugiej stronie.
             </div>
-            <div>
-                <input type="radio" value="male" name="maleFormRadio" id="aboutYouMale">
-                <label id="maleRadioFormMale" for="aboutYouMale">O Tobie</label>
+            <div class="radioInput">
+                <input type="radio" value="male" name="maleFormRadio" id="aboutYouMaleRadio">
+                <label id="maleRadioFormMale" for="aboutYouMaleRadio">O Tobie</label>
             </div>
-            <div>
-                <input type="radio" value="female" name="maleFormRadio" id="aboutPartnerMale">
-                <label id="femaleRadioFormMale" for="aboutPartnerMale">O Partnerce</label>
+            <div class="radioInput">
+                <input type="radio" value="female" name="maleFormRadio" id="aboutPartnerMaleRadio">
+                <label id="femaleRadioFormMale" for="aboutPartnerMaleRadio">O Partnerce</label>
             </div>
         </form>
         <button id="maleAnswer" class="maleAnswerSection__button">Odpowiedz</button>

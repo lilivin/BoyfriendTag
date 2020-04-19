@@ -44,9 +44,11 @@ function lotto() {
 
 function askQuestion() {
         lotto();
-        document.getElementById('questionFemale').innerHTML = `${question}`;
-        document.getElementById('questionMale').innerHTML = `${question}`;
-        document.getElementById('questionEnd').innerHTML = `${question}`;
+        document.getElementById('questionFemaleRadio').innerHTML = question;
+        document.getElementById('questionFemaleWrite').innerHTML = question;
+        document.getElementById('questionMaleRadio').innerHTML = question;
+        document.getElementById('questionMaleWrite').innerHTML = question;
+        document.getElementById('questionEnd').innerHTML = question;
         myArray.splice(questionNumber, 1);
 
         if (questionType == "radio") {

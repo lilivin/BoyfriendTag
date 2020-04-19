@@ -1,15 +1,16 @@
 @import '../mixins.scss';
 
+/*
 input[type="radio"] {
     background-color: rgb(255, 255, 255);
     border-radius: 25px;
     content: '';
     display: block;
-    height: 12px;
-    left: -1px;
+    height: 8px;
+    left: -10px;
     position: relative;
     top: -4px;
-    width: 12px;
+    width: 8px;
 }
 
 input[type="radio"]:after {
@@ -23,21 +24,24 @@ input[type="radio"]:after {
     width: 17px;
     @media(max-width: 360px) {
         width: 12px;
+        top: -1px;
         height: 12px;
     }
 }
 
 input[type="radio"]:checked:after {
-    width: 10px;
-    height: 10px;
-    border: 4px rgb(255, 255, 255) solid;
+    width: 14px;
+    height: 14px;
+    border: 2px rgb(255, 255, 255) solid;
     background: #AC3B61;
     @media(max-width: 360px) {
         width: 8px;
         height: 8px;
-        border: 3px rgb(255, 255, 255) solid;
+        border: 2px rgb(255, 255, 255) solid;
+        background: #AC3B61;
     }
 }
+*/
 
 .femaleAnswerSection {
     max-width: 100vw;
@@ -108,8 +112,13 @@ input[type="radio"]:checked:after {
                 margin-top: 5px;
                 line-height: 1.8rem;
             }
-            input {
-                display: inline;
+            .radioInput {
+                display: flex; 
+                align-items: center; 
+                justify-content: center;
+                input {
+                    margin-right: 10px;
+                }
             }
             @media(max-width: 560px) {
                 width: 400px;

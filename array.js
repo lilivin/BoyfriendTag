@@ -1,4 +1,4 @@
-var myArray = [
+let myArray = [
     {
       "id": 1,
       "name": "Ulubione danie",
@@ -22,7 +22,7 @@ var myArray = [
     },
     {
       "id": 5,
-      "name": 'Kto powiedział pierwszy "kocham Cię"?',
+      "name": 'Kto powiedział pierwszy "kocham Cie"?',
       "type": "radio"
     },
     {
@@ -37,12 +37,12 @@ var myArray = [
     },
     {
       "id": 8,
-      "name": 'Kto zaprosił na pierwszą randkę?',
+      "name": 'Kto zaprosił na pierwszą randke?',
       "type": "radio"
     },
     {
       "id": 9,
-      "name": 'Kto bardziej starał się, żeby poderwać drugą połówkę?',
+      "name": 'Kto bardziej starał się, żeby poderwać drugą połówke?',
       "type": "radio"
     },
     {
@@ -67,7 +67,7 @@ var myArray = [
     },
     {
       "id": 14,
-      "name": 'Największa fobia lub lęk',
+      "name": 'Najwieksza fobia lub lęk',
       "type": "write"
     },
     {
@@ -82,22 +82,22 @@ var myArray = [
     },
     {
       "id": 17,
-      "name": 'Najlepsze kanapki są z?',
+      "name": 'Najlepsze kanapki sa z?',
       "type": "write"
     },
     {
       "id": 18,
-      "name": 'Kto rządzi w związku?',
+      "name": 'Kto rzadzi w zwiazku?',
       "type": "radio"
     },
     {
       "id": 19,
-      "name": 'Imię najlepszego przyjaciela',
+      "name": 'Imie najlepszego przyjaciela',
       "type": "write"
     },
     {
       "id": 20,
-      "name": 'Najwięcej czasu przeznacza/przeznaczam na...',
+      "name": 'Najwiecej czasu przeznaczam na...',
       "type": "write"
     },
     {
@@ -107,7 +107,7 @@ var myArray = [
     },
     {
       "id": 22,
-      "name": 'Na co zwraca/zwracam uwagę u płci przeciwnej?',
+      "name": 'Na co zwracam uwage u płci przeciwnej?',
       "type": "write"
     },
     {
@@ -157,7 +157,7 @@ var myArray = [
     },
     {
       "id": 32,
-      "name": 'Kto częściej przeklina?',
+      "name": 'Kto cześciej przeklina?',
       "type": "radio"
     },
     {
@@ -167,7 +167,7 @@ var myArray = [
     },
     {
       "id": 34,
-      "name": 'Ulubiony piosenkarz/piosenkarka',
+      "name": 'Ulubiony muzyk',
       "type": "write"
     },
     {
