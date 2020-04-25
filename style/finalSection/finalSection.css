@@ -11,15 +11,39 @@
   text-align: center;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 150px 100px auto auto 100px;
-      grid-template-rows: 150px 100px auto auto 100px;
+  -ms-grid-rows: auto 100px;
+      grid-template-rows: auto 100px;
   text-align: center;
   color: white;
   font-family: 'Press Start 2P', cursive;
 }
 
 .finalSection__header {
-  font-size: 64px;
+  margin-top: 50px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 62px;
+  text-shadow: -6px 0 black, 0 6px black, 6px 0 black, 0 -6px black;
+  display: block;
+  margin: auto auto;
+}
+
+@media (max-width: 1152px) {
+  .finalSection__header {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 560px) {
+  .finalSection__header {
+    font-size: 32px;
+    line-height: 3.4rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .finalSection__header {
+    font-size: 32px;
+  }
 }
 
 .finalSection__button {
@@ -34,5 +58,10 @@
   font-size: 24px;
   margin: 8px auto;
   font-family: 'Press Start 2P', cursive;
+}
+
+.finalSection__button a {
+  color: white;
+  text-decoration: none;
 }
 /*# sourceMappingURL=finalSection.css.map */

@@ -10,14 +10,32 @@
     transform: translate(-50%, -50%);
     text-align: center;
     grid-template-columns: 1fr;
-    grid-template-rows: 150px 100px auto auto 100px;
+    grid-template-rows: auto 100px;
     text-align: center;
     color: white;
     font-family: 'Press Start 2P', cursive;
     &__header {
-        font-size: 64px;
+        @include header();
+        display: block;
+        margin: auto auto;
+
+        @media(max-width: 1152px) {
+            font-size: 42px;
+        }
+
+        @media(max-width: 560px) {
+            font-size: 32px;
+            line-height: 3.4rem;
+        }
+        @media(max-width: 350px) {
+            font-size: 32px;
+        }
     }
     &__button {
         @include button();
+        a {
+            color: white;
+            text-decoration: none;
+        }
     }
 }

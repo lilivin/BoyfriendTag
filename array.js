@@ -189,5 +189,120 @@ let myArray = [
       "id": 38,
       "name": 'Ulubiony smak lodów',
       "type": "write"
+    },
+    {
+      "id": 39,
+      "name": 'Czego boje sie najbardziej?',
+      "type": "write"
+    },
+    {
+      "id": 40,
+      "name": 'Książka, którą przeczytałem wiele razy...',
+      "type": "write"
+    },
+    {
+      "id": 41,
+      "name": 'W ilu krajach byłem/byłam?',
+      "type": "write"
+    },
+    {
+      "id": 42,
+      "name": 'Imię najlepszego przyjaciela z dzieciństwa...',
+      "type": "write"
+    },
+    {
+      "id": 43,
+      "name": 'Najfajniejszy etap edukacji to...',
+      "type": "write"
+    },
+    {
+      "id": 44,
+      "name": 'Gdzie chciałbyś zamieszkać na starość?',
+      "type": "write"
+    },
+    {
+      "id": 45,
+      "name": 'Jak mówi na mnie mama?',
+      "type": "write"
+    },
+    {
+      "id": 46,
+      "name": 'Jak mówi na mnie tata?',
+      "type": "write"
+    },
+    {
+      "id": 47,
+      "name": 'W jakie teorie spiskowe wierzę?',
+      "type": "write"
+    },
+    {
+      "id": 48,
+      "name": 'Ulubione słodycze to...',
+      "type": "write"
+    },
+    {
+      "id": 49,
+      "name": 'Ulubione fastfood to...',
+      "type": "write"
+    },
+    {
+      "id": 50,
+      "name": 'Moja pierwsza praca to...',
+      "type": "write"
+    },
+    {
+      "id": 51,
+      "name": 'Znienawidzony obowiązek domowy...',
+      "type": "write"
+    },
+    {
+      "id": 52,
+      "name": 'Najbardziej obrzydza mnie...',
+      "type": "write"
+    },
+    {
+      "id": 53,
+      "name": 'Najczęściej używane przekleństwo to...',
+      "type": "write"
+    },
+    {
+      "id": 54,
+      "name": 'Jak mówię na seks...',
+      "type": "write"
+    },
+    {
+      "id": 55,
+      "name": 'Ulubiona pora roku to...',
+      "type": "write"
+    },
+    {
+      "id": 56,
+      "name": 'Jakie mam przezwisko',
+      "type": "write"
+    },
+    {
+      "id": 57,
+      "name": 'W ilu językach potrafię się przedstawić...',
+      "type": "write"
+    },
+    {
+      "id": 58,
+      "name": 'Najbardziej szalona rzecz jaką zrobiłem w życiu to...',
+      "type": "write"
+    },
+    {
+      "id": 59,
+      "name": 'Najlepsza czekolada jest z...',
+      "type": "write"
+    },
+    {
+      "id": 60,
+      "name": 'Ulubiona pora dnia to...',
+      "type": "write"
+    },
+    {
+      "id": 61,
+      "name": 'Ile chce mieć dzieci?',
+      "type": "write"
     }
   ]

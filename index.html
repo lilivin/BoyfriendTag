@@ -19,7 +19,7 @@
 
     <!-- Welcome Section -->
 
-    <section class="welcomeSection sectionStyle" id="welcomeSection" style="display: grid;">
+    <section class="welcomeSection sectionStyle" id="welcomeSection" style="display: none;">
         <h1 class="welcomeSection__header">BoyFriend Tag</h1>
         <form class="welcomeSection__form">
             <div class="form">
@@ -89,6 +89,7 @@
             </div>
         </form>
         <button id="femaleAnswer" class="femaleAnswerSection__button">Odpowiedz</button>
+        <button id="skipButton" class="femaleAnswerSection__button">Pomiń</button>
     </section>
 
 
@@ -182,11 +183,12 @@
     <!-- Final Section -->
 
 
-    <section id="finalSection" class="finalSection sectionStyle" style="display: none;">
-        <h1 class="finalSection__header">Wygrywa Karol</h1>
-        <button class="finalSection__button">Powrót do menu!</button>
+    <section id="finalSection" class="finalSection sectionStyle" style="display: grid;">
+        <h1 id="winnerName" class="finalSection__header">Wygrywa Karol</h1>
+        <button class="finalSection__button"><a href="./index.html">Menu</a></button>
     </section>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 <script src="array.js"></script>
 <script src="game.js"></script>
 </html>

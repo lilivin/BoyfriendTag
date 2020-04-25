@@ -7,6 +7,7 @@ const maleCorrectBtn = document.getElementById('maleCorrectBtn');
 const bothCorrectBtn = document.getElementById('bothCorrectBtn');
 const nobodyCorrectBtn = document.getElementById('nobodyCorrectBtn');
 const femaleCorrectBtn = document.getElementById('femaleCorrectBtn');
+const skipButton = document.getElementById('skipButton');
 
 const welcomeSection = document.getElementById('welcomeSection');
 const questionSection = document.getElementById('questionSection');
@@ -15,6 +16,7 @@ const maleAnswerSection = document.getElementById('maleAnswerSection');
 const checkAnswerSection = document.getElementById('checkAnswerSection');
 const finalSection = document.getElementById('finalSection');
 
+let winnerName = document.getElementById('winnerName');
 
 let femaleName = '';
 let maleName = '';
@@ -74,10 +76,9 @@ function validation() {
         if(femaleName.length >= 8 || maleName >= 8 ) {
             alert('Imie może mieć maksymalnie 8 liter.')
         } else {
+            questionSection.style.display = 'grid';
             welcomeSection.style.display = 'none';
             checkAnswerSection.style.display = 'none';
-            questionSection.style.display = 'grid';
-
             document.getElementById('femalePointsContainer').innerHTML = `<b>${femaleName}:</b> ${femalePoints} punktów`;
             document.getElementById('malePointsContainer').innerHTML = `<b>${maleName}:</b> ${malePoints} punktów`;
             askQuestion();
@@ -95,6 +96,17 @@ startAnswerBtn.addEventListener('click', function() {
     document.getElementById('maleRadioFormFemale').innerHTML = `${maleName}`;
     questionSection.style.display = 'none';
     femaleAnswerSection.style.display = 'grid';
+})
+
+skipButton.addEventListener('click', function() {
+    femaleAnswerSection.style.display = 'none';
+    refreshInputs();
+    if((malePoints >= howGames) || (femalePoints >= howGames)){
+        checkAnswerSection.style.display = "none";
+        finalSection.style.display = "block";
+    } else {
+        validation();
+    }
 })
 
 femaleAnswerBtn.addEventListener('click', function() {
@@ -118,9 +130,6 @@ femaleAnswerBtn.addEventListener('click', function() {
             maleAnswerSection.style.display = 'grid';
         }
     }
-    
-
-    
 })
 
 function checkWhoWin() {
@@ -185,33 +194,76 @@ maleCorrectBtn.addEventListener('click', function() {
     malePoints += 1;
     aboutPartnerFemale = '';
     refreshInputs();
-    if(malePoints >= howGames){
+    if(myArray.length < 1) {
+        alert('Brak pytań! Gra zostanie podsumowana.')
         checkAnswerSection.style.display = "none";
         finalSection.style.display = "block";
+        if(malePoints > femalePoints) {
+            winnerName.innerHTML = `Wygrywa ${maleName}!`
+        } else if (femalePoints > malePoints) {
+            winnerName.innerHTML = `Wygrywa ${femaleName}!`
+        } else if (femalePoints == malePoints){
+            winnerName.innerHTML = `Znacie się jak łyse konie! Uzyskaliście tą samą ilość punktów!`
+        }
     } else {
-        validation();
+        if(malePoints >= howGames){
+            checkAnswerSection.style.display = "none";
+            finalSection.style.display = "block";
+            winnerName.innerHTML = `Wygrywa ${maleName}!`
+        } else {
+            validation();
+        }
     }
-    
 })
 
 bothCorrectBtn.addEventListener('click', function() {
     malePoints += 1;
     femalePoints += 1;
     refreshInputs();
-    if((malePoints >= howGames) || (femalePoints >= howGames)){
+    if(myArray.length < 1) {
+        alert('Brak pytań! Gra zostanie podsumowana.')
         checkAnswerSection.style.display = "none";
         finalSection.style.display = "block";
+        if(malePoints > femalePoints) {
+            winnerName.innerHTML = `Wygrywa ${maleName}!`
+        } else if (femalePoints > malePoints) {
+            winnerName.innerHTML = `Wygrywa ${femaleName}!`
+        } else if (femalePoints == malePoints){
+            winnerName.innerHTML = `Znacie się jak łyse konie! Uzyskaliście tą samą ilość punktów!`
+        }
     } else {
-        validation();
+        if((malePoints >= howGames) && (femalePoints >= howGames)) {
+            checkAnswerSection.style.display = "none";
+            finalSection.style.display = "block";
+            winnerName.innerHTML = `Ta sama ilość punków!`
+        } else if(malePoints >= howGames){
+            checkAnswerSection.style.display = "none";
+            finalSection.style.display = "block";
+            winnerName.innerHTML = `Wygrywa ${maleName}!`
+        } else if (femalePoints >= howGames){
+            checkAnswerSection.style.display = "none";
+            finalSection.style.display = "block";
+            winnerName.innerHTML = `Wygrywa ${femaleName}!`
+        } else {
+            validation();
+        }
     }
 })
 
 nobodyCorrectBtn.addEventListener('click', function() {
-    refreshInputs();
-    if((malePoints >= howGames) || (femalePoints >= howGames)){
+    if(myArray.length < 1) {
+        alert('Brak pytań! Gra zostanie podsumowana.')
         checkAnswerSection.style.display = "none";
         finalSection.style.display = "block";
+        if(malePoints > femalePoints) {
+            winnerName.innerHTML = `Wygrywa ${maleName}!`
+        } else if (femalePoints > malePoints) {
+            winnerName.innerHTML = `Wygrywa ${femaleName}!`
+        } else if (femalePoints == malePoints){
+            winnerName.innerHTML = `Znacie się jak łyse konie! Uzyskaliście tą samą ilość punktów!`
+        }
     } else {
+        refreshInputs();
         validation();
     }
 })
@@ -219,13 +271,26 @@ nobodyCorrectBtn.addEventListener('click', function() {
 femaleCorrectBtn.addEventListener('click', function() {
     femalePoints += 1;
     refreshInputs();
-    if(femalePoints >= howGames){
+    if(myArray.length < 1) {
+        alert('Brak pytań! Gra zostanie podsumowana.')
         checkAnswerSection.style.display = "none";
         finalSection.style.display = "block";
+        if(malePoints > femalePoints) {
+            winnerName.innerHTML = `Wygrywa ${maleName}!`
+        } else if (femalePoints > malePoints) {
+            winnerName.innerHTML = `Wygrywa ${femaleName}!`
+        } else if (femalePoints == malePoints){
+            winnerName.innerHTML = `Znacie się jak łyse konie! Uzyskaliście tą samą ilość punktów!`
+        }
     } else {
-        validation();
+        if(femalePoints >= howGames){
+            checkAnswerSection.style.display = "none";
+            finalSection.style.display = "block";
+            winnerName.innerHTML = `Wygrywa ${femaleName}!`
+        } else {
+            validation();
+        }
     }
-    
 })
 
 

@@ -49,7 +49,7 @@ input[type="radio"]:checked:after {
     display: grid;
     text-align: center;
     grid-template-columns: 1fr;
-    grid-template-rows: 100px auto 100px;
+    grid-template-rows: 100px auto 100px 100px;
     text-align: center;
     color: white;
     font-family: 'Press Start 2P', cursive;
@@ -142,6 +142,6 @@ input[type="radio"]:checked:after {
         @include button();
     }
     @media(max-width: 560px) {
-        grid-template-rows: auto auto auto;
+        grid-template-rows: auto auto auto auto;
     }
 }
