@@ -19,8 +19,8 @@
 
     <!-- Welcome Section -->
 
-    <section class="welcomeSection sectionStyle" id="welcomeSection" style="display: none;">
-        <h1 class="welcomeSection__header">BoyFriend Tag</h1>
+    <section class="welcomeSection sectionStyle" id="welcomeSection" style="display: grid;">
+        <h1 class="welcomeSection__header">Mr&Mrs TAG</h1>
         <form class="welcomeSection__form">
             <div class="form">
                 <label class="form__label" for="female">Imie Partnerki</label>
@@ -183,12 +183,19 @@
     <!-- Final Section -->
 
 
-    <section id="finalSection" class="finalSection sectionStyle" style="display: grid;">
+    <section id="finalSection" class="finalSection sectionStyle" style="display: none;">
         <h1 id="winnerName" class="finalSection__header">Wygrywa Karol</h1>
         <button class="finalSection__button"><a href="./index.html">Menu</a></button>
     </section>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-<script src="array.js"></script>
-<script src="game.js"></script>
+<script src="./Scripts/Functions/askQuestionFunction.js"></script>
+<script src="./Scripts/Functions/startAnswerFunction.js"></script>
+<script src="./Scripts/Functions/skipFunction.js"></script>
+<script src="./Scripts/Functions/femaleAnswerFunction.js"></script>
+<script src="./Scripts/Functions/checkWhoWin.js"></script>
+<script src="./Scripts/Functions/addPointFunctions.js"></script>
+<script src="./Scripts/Functions/refreshInputs.js"></script>
+<script src="./Scripts/array.js"></script>
+<script src="./Scripts/game.js"></script>
 </html>
